@@ -163,3 +163,45 @@ button:active {
   }
 }
  
+
+
+@media (min-width: 481px) {
+  .container {
+    padding: 30px 15px; 
+    min-height: 400px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  label {
+    font-size: 17.6px;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 22px;
+    border-radius: 12px;
+    padding: 6px 14px;
+  }
+
+  #results {
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 250, 79);
+    font-weight: bolder;
+  }
+
+  #weight-guide h3 {
+    font-size: 22px;
+  }
+
+  #weight-guide p {
+    font-size: 15.6px;
+  }
+}
