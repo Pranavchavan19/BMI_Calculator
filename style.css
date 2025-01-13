@@ -21,8 +21,8 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
   width: 80%;
   height: 84%;
-  max-width: 500px;
-  min-height: 500px;
+  /* max-width: 600px;
+  min-height: 600px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,8 +120,6 @@ button:active {
 
 @media (max-width: 480px) {
   .container {
-    
-    
     padding: 30px 15px; 
     min-height: 400px;
   }
@@ -163,45 +161,48 @@ button:active {
   }
 }
  
-
-
-@media (min-width: 481px) {
+@media (min-width: 1024px) {
   .container {
-    padding: 30px 15px; 
-    min-height: 400px;
+    padding: 20px 40px; /* Reduced top and bottom padding to 20px, left and right remain 40px */
+    min-height: 200px;
+    max-width: 600px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 36px; /* Reduced font size for desktop */
+    margin-bottom: 20px; /* Adjusted spacing for compact layout */
   }
 
   label {
-    font-size: 17.6px;
+    font-size: 18px; /* Slightly smaller labels for balance */
   }
 
   input[type="text"] {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 18px; /* Smaller text input font */
+    padding: 10px; /* Reduced padding */
+    width: calc(100% - 20px); /* Adjusted width to maintain layout */
   }
 
   button {
-    font-size: 22px;
-    border-radius: 12px;
-    padding: 6px 14px;
+    font-size: 20px; /* Reduced button font size */
+    border-radius: 8px;
+    padding: 10px 18px; /* Reduced padding for a compact look */
+    max-width: 220px; /* Slightly narrower button */
   }
 
   #results {
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(0, 250, 79);
-    font-weight: bolder;
+    font-size: 20px; /* Reduced font size for results text */
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    color: rgb(255, 223, 0);
+    font-weight: bold;
   }
 
   #weight-guide h3 {
-    font-size: 22px;
+    font-size: 24px; /* Reduced guide heading size */
+    margin-bottom: 10px; /* Compact spacing */
   }
 
   #weight-guide p {
-    font-size: 15.6px;
+    font-size: 16px; /* Smaller paragraph font */
   }
 }
