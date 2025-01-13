@@ -12,7 +12,6 @@ body {
   overflow: hidden;
 }
 
-
 .container {
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
@@ -182,9 +181,9 @@ button:active {
   }
 
   #results {
-    font-size: 20px;
-    /* font-family: 'Courier New', Courier, monospace; */
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    /* font-size: 20px;
+     font-family: 'Courier New', Courier, monospace; 
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(0, 250, 79);
     font-weight: bolder;
@@ -198,3 +197,4 @@ button:active {
     font-size: 15.6px;
   }
 }
+
