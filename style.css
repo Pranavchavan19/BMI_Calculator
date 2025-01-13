@@ -117,41 +117,6 @@ button:active {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 40px 20px; 
-    min-height: 450px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  label {
-    font-size: 14px;
-  }
-
-  input[type="text"] {
-    font-size: 14px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
-
-  #results {
-    font-size: 16px;
-  }
-
-  #weight-guide h3 {
-    font-size: 18px;
-  }
-
-  #weight-guide p {
-    font-size: 13px;
-  }
-}
 
 @media (max-width: 480px) {
   .container {
@@ -181,8 +146,8 @@ button:active {
   }
 
   #results {
-    /* font-size: 20px;
-     font-family: 'Courier New', Courier, monospace; 
+     font-size: 20px;
+    /* font-family: 'Courier New', Courier, monospace; 
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(0, 250, 79);
@@ -197,4 +162,4 @@ button:active {
     font-size: 15.6px;
   }
 }
-
+ 
