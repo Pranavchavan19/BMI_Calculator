@@ -1,30 +1,43 @@
 
+// const form = document.querySelector('form');
 
-// Array of predefined colors for unique logs
-const colors = ['#FF5733', '#33FF57', '#3357FF', '#F5A623', '#8E44AD', '#E74C3C', '#2ECC71', '#3498DB', '#F39C12'];
+// form.addEventListener('submit', function (e) {
+//   e.preventDefault();
 
-// Variable to track which color to use
-let colorIndex = 0;
+//   const height = parseInt(document.querySelector('#height').value);
+//   const weight = parseInt(document.querySelector('#weight').value);
+//   const results = document.querySelector('#results');
+//   const newr=   document.querySelector('#newresult').value;
 
-// Scroll detection on the results container
-const results = document.querySelector('#results');
-
-results.addEventListener('scroll', function() {
-  if (results.scrollTop + results.clientHeight >= results.scrollHeight) {
-    // Select the color based on the current index
-    const color = colors[colorIndex];
+//   if (height === '' || height < 0 || isNaN(height)) {
+//     results.innerHTML = `Please give a valid height ${height}`;
+//   } else if (weight === '' || weight < 0 || isNaN(weight)) {
+//     results.innerHTML = `Please give a valid weight ${weight}`;
+//   } else {
+//     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+   
+//     results.innerHTML = `<span>${bmi}</span>`;
+     
+//     if(bmi <18.6)
+//       {
+//         results.innerHTML  +=  ` </br> You are not fit`
+//       }
+//       else if(bmi > 24.9)
+//         {
+//           results.innerHTML +=  ` </br> You are Too much weighted`
+//         }
+//        else if(bmi >18.6 || b< 24.9)
+//         {
+//           results.innerHTML +=  ` </br> You are  fit`
+//         }
+//         else
+//         {
+//           results.innerHTML += ` </br>You did some mistake`
+//         }
     
-    // Log the message with the unique color
-    console.log('%cReached the bottom of the results', `color: ${color}`);
     
-    // Move to the next color, cycle through the colors
-    colorIndex = (colorIndex + 1) % colors.length;  // Cycle through colors in the array
-  }
-});
-
-
-
-
+//   } 
+// });
 
 
 
@@ -39,35 +52,27 @@ form.addEventListener('submit', function (e) {
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
   const results = document.querySelector('#results');
-  const newr=   document.querySelector('#newresult').value;
 
   if (height === '' || height < 0 || isNaN(height)) {
-    results.innerHTML = `Please give a valid height ${height}`;
+    results.innerHTML = `Please give a valid height: ${height}`;
   } else if (weight === '' || weight < 0 || isNaN(weight)) {
-    results.innerHTML = `Please give a valid weight ${weight}`;
+    results.innerHTML = `Please give a valid weight: ${weight}`;
   } else {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-   
     results.innerHTML = `<span>${bmi}</span>`;
-     
-    if(bmi <18.6)
-      {
-        results.innerHTML  +=  ` </br> You are not fit`
-      }
-      else if(bmi > 24.9)
-        {
-          results.innerHTML +=  ` </br> You are Too much weighted`
-        }
-       else if(bmi >18.6 || b< 24.9)
-        {
-          results.innerHTML +=  ` </br> You are  fit`
-        }
-        else
-        {
-          results.innerHTML += ` </br>You did some mistake`
-        }
-    
-    
-  } 
-});
 
+    if (bmi < 18.6) {
+      // Add color for "not fit" message
+      results.innerHTML += `<br/><span style="color: red;">You are not fit</span>`;
+    } else if (bmi > 24.9) {
+      // Add color for "too much weighted" message
+      results.innerHTML += `<br/><span style="color: orange;">You are too much weighted</span>`;
+    } else if (bmi >= 18.6 && bmi <= 24.9) {
+      // Add color for "fit" message
+      results.innerHTML += `<br/><span style="color: green;">You are fit</span>`;
+    } else {
+      // Add color for "mistake" message
+      results.innerHTML += `<br/><span style="color: blue;">You did some mistake</span>`;
+    }
+  }
+});
