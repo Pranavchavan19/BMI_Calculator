@@ -1,3 +1,36 @@
+
+
+// Array of predefined colors for unique logs
+const colors = ['#FF5733', '#33FF57', '#3357FF', '#F5A623', '#8E44AD', '#E74C3C', '#2ECC71', '#3498DB', '#F39C12'];
+
+// Variable to track which color to use
+let colorIndex = 0;
+
+// Scroll detection on the results container
+const results = document.querySelector('#results');
+
+results.addEventListener('scroll', function() {
+  if (results.scrollTop + results.clientHeight >= results.scrollHeight) {
+    // Select the color based on the current index
+    const color = colors[colorIndex];
+    
+    // Log the message with the unique color
+    console.log('%cReached the bottom of the results', `color: ${color}`);
+    
+    // Move to the next color, cycle through the colors
+    colorIndex = (colorIndex + 1) % colors.length;  // Cycle through colors in the array
+  }
+});
+
+
+
+
+
+
+
+
+
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function (e) {
@@ -38,14 +71,3 @@ form.addEventListener('submit', function (e) {
   } 
 });
 
-
-
-// Scroll detection on the results container
-const results = document.querySelector('#results');
-
-results.addEventListener('scroll', function() {
-  if (results.scrollTop + results.clientHeight >= results.scrollHeight) {
-    console.log('Reached the bottom of the results');
-    // You can add any action here, like loading more content
-  }
-});
