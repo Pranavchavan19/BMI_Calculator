@@ -72,7 +72,7 @@ form.addEventListener('submit', function (e) {
       results.innerHTML += `<br/><span style="color: green;">You are fit</span>`;
     } else {
       // Add color for "mistake" message
-      results.innerHTML += `<br/><span style="color: blue;">You did some mistake</span>`;
+      results.innerHTML += `<br/><span style="color: red;">You did some mistake</span>`;
     }
   }
 });
