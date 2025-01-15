@@ -40,3 +40,12 @@ form.addEventListener('submit', function (e) {
 
 
 
+// Scroll detection on the results container
+const results = document.querySelector('#results');
+
+results.addEventListener('scroll', function() {
+  if (results.scrollTop + results.clientHeight >= results.scrollHeight) {
+    console.log('Reached the bottom of the results');
+    // You can add any action here, like loading more content
+  }
+});
